@@ -1,0 +1,27 @@
+/**
+ * Styling for the about page
+ */
+/**
+ * Variables
+ */
+.nav-link {
+  color: #00ff00;
+  height: 100px; }
+
+/**
+ * nesting
+ */
+nav ul {
+  list-style: none; }
+  nav ul li .nav-link {
+    color: black; }
+  nav ul li #my-id {
+    text-decoration: none; }
+
+/**
+ * mixins
+ */
+a {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%; }

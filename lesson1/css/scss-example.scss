@@ -1,0 +1,78 @@
+
+@import "about.scss";
+
+
+
+
+/**
+ * Variables
+ */
+
+$my-color: #00ff00;
+$my-size: 100px;
+
+.nav-link{
+	color: $my-color;
+	height: $my-size;
+}
+
+
+
+/**
+ * nesting
+ */
+ 
+ nav{
+ 	ul{
+ 		list-style: none;
+ 		li{
+ 			.nav-link{
+ 				color: black; 				
+ 			}
+ 			#my-id{
+ 				text-decoration: none;
+ 			}
+ 		}
+ 	}	
+ }
+         
+ 
+ /**
+  * mixins
+  */
+  
+ @mixin border-radius($radius){
+ 	border-radius: $radius;
+ 	-moz-border-radius: $radius;
+ 	-webkit-border-radius: $radius;
+ }
+ 
+ @mixin hello-world($color){
+ 	border-color: $color;
+ 	color: $color;
+ }
+ 
+ a{
+ 	@include border-radius(50%);
+ }
+ 
+ 
+ /**
+  * inheritance
+  */
+ 
+ .inherit-me{
+ 	color: red;
+ 	border-color: black;
+ 
+ }
+ 
+ 
+ .btn{
+ 	@extend .inherit-me;
+ }
+ 
+ 
+ 
+ 
+ 

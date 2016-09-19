@@ -11,45 +11,51 @@
 		</style>
 	</head>
 	<body>
-		<h1>
-		Forms
-		</h1>
-		
-		<form method="get" action="" novalidate>
-			<label for="username">Username</label>
-			<input type="text" name="username" id="username" required minlength="5" pattern="[a-zA-Z]+" />
+	
+		<div class="forms-page">
+			<h1>
+			Forms
+			</h1>
 			
-			<label for="password">password</label>
-			<input type="password" name="yariv" id="password" />
-			<label >checkbox</label>
-			<input type="checkbox" name="isAgree" />
-			<label>Radio button</label>
-				<input type="radio" name="radioButton" value="1" />
-				<input type="radio" name="radioButton" value="2" />
-				<input type="radio" name="radioButton" value="3" />
+			<form method="get" action="" novalidate>
+				<label for="username">Username</label>
+				<input type="text" name="username" id="username" required minlength="5" pattern="[a-zA-Z]+" />
 				
-				
-			<br />
-			<input type="date" />
-			<select name="multiselect">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-			</select>
-			<button type="submit">Submit</button>
-		</form>
+				<label for="password">password</label>
+				<input type="password" name="yariv" id="password" />
+				<label >checkbox</label>
+				<input type="checkbox" name="isAgree" />
+				<label>Radio button</label>
+					<input type="radio" name="radioButton" value="1" />
+					<input type="radio" name="radioButton" value="2" />
+					<input type="radio" name="radioButton" value="3" />
+					
+					
+				<br />
+				<input type="date" />
+				<select name="multiselect">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				<button type="submit">Submit</button>
+			</form>
+			
+			<h1>
+			Attributes
+			</h1>
+			
+			<h2 id="hello">id</h2>
+			
+			<h2 class="my-headers" style="color: orange;">class</h2>
+			
+			<h3 class="my-headers">class</h3>
+			
+			<h3 style=""></h3>
 		
-		<h1>
-		Attributes
-		</h1>
+		</div>
+	
 		
-		<h2 id="hello">id</h2>
-		
-		<h2 class="my-headers" style="color: orange;">class</h2>
-		
-		<h3 class="my-headers">class</h3>
-		
-		<h3 style=""></h3>
 		
 	
 	</body>
