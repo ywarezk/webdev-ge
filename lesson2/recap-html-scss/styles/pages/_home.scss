@@ -1,0 +1,45 @@
+/**
+ * styling for the homepage
+ */
+ 
+
+ 
+ .home-page{
+ 
+ 	.navigation{
+ 		height: 100px;
+    	background-color: $bg-nav;
+ 		.logo{
+			float: left; 			
+ 		}
+ 		.links{
+ 			float: right;
+ 			ul{
+ 				list-style: none;
+ 				li{
+ 					float: left;
+ 					&:last-child{
+ 						margin-left: 20px;
+ 					}
+ 				}
+
+ 			}
+ 		} 		
+ 	}
+ 	
+ 	.tasks-form{
+ 		width: 500px;
+ 		margin: 0 auto;
+		.form-group{
+			label{
+				width: 100px;
+    			display: inline-block;
+			}
+		}
+ 	}
+ 
+ }
+ 
+ 
+ 
+ 
