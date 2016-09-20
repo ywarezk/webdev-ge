@@ -13,7 +13,15 @@ var Pokemon = function Pokemon(name, power, type){
 	
 };
 
+
+
+Pokemon.prototype.sayHello2 = function(){
+	console.log(this.name);
+}
+
 var pikachu = new Pokemon('pikachu', 10, 'lightning');
+
+pikachu.sayHello2();
 
 //pikachu.sayHello();
 
@@ -21,7 +29,7 @@ var pikachu = new Pokemon('pikachu', 10, 'lightning');
 
 //inheritance
 
-var SeaPokemon = function SeaPokemon(name, power){
+/*var SeaPokemon = function SeaPokemon(name, power){
 	var self = this;
 	
 	Pokemon.call(this, name, power, 'sea');
@@ -35,6 +43,7 @@ var SeaPokemon = function SeaPokemon(name, power){
 
 var squirtle = new SeaPokemon('squirtle', 5);
 
-squirtle.sayHello();
+squirtle.sayHello();*/
 
 //squirtle.swim();
+
