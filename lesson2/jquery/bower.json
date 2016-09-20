@@ -1,0 +1,20 @@
+{
+  "name": "jquery",
+  "homepage": "https://github.com/ywarezk/webdev-ge",
+  "authors": [
+    "Yariv katz <ywarezk@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

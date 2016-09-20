@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Jquery
+		</title>
+	</head>
+	<body>
+		
+		<form>
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username" />
+			<button type="submit">submit</button>
+		</form>
+		
+		
+		
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		
+		<script>
+			var promise = $.ajax('https://nztodo.herokuapp.com/api/task/?format=json', {
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				method: 'GET'
+			});
+			promise.then(function(data){
+				console.log(JSON.stringify(data));
+			}, function(){
+				console.log('error');
+			});
+		</script>
+	</body>
+</html>
