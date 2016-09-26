@@ -1,0 +1,20 @@
+<html ng-app="AppModule">
+	<head>
+		<title>
+			Angular templates
+		</title>
+		<style>
+			form[name="login"] input[name="username"].ng-invalid.ng-touched{
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body ng-controller="MainController as ctrl">
+		<div ng-include="'src/templates/main.template.html'">
+		</div>
+		
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="src/app.module.js"></script>
+		<script src="src/controllers/main.controller.js"></script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- 
+	Template for the main controller
+ -->
+ 
+ <h1>
+ 	Angular templates
+ </h1>
+ 
+ <h2>
+ 	Interpolation
+ </h2>
+ 
+ 
+ <p>{{1 + 1}}</p>
+ 
+ <p>{{ctrl.greeting}}</p>
+ 
+ <p>{{ctrl.sayHello()}}</p>
+ 
+ <h2>
+ Two way binding
+ </h2>
+ 
+ <form ng-submit="ctrl.alertUsername()" >
+ 	<label>Username</label>
+ 	<input name="username" type="text" ng-model="ctrl.username" />
+ 	<button type="button" ng-click="ctrl.clearUsername()">Clear</button>
+ 	<button type="submit">Submit</button>
+ </form>
+ 
+ <h2>
+ Form validation
+ </h2>
+ 
+ <form name="login" novalidate>
+ 	<label>username</label>
+ 	<input type="text" name="username" ng-model="ctrl.loginUsername" ng-minlength="5" required  />
+ 	<br/>
+ 	<div ng-if="login.username.$error.required">
+ 		the field is required
+ 	</div>
+ 	<div ng-if="login.username.$error.minlength">
+ 		the field name has to be 5 letters
+ 	</div>
+ 	<label>password</label>
+ 	<input type="password" name="password" ng-model="ctrl.loginPassword" />
+ 	<br/>
+ 	<button type="submit">Submit</button>
+ 	<p><strong>is form valid:</strong> {{login.$valid}}</p>
+ </form>
+ 
+ 
+ 
+ 
+ 
+ 
