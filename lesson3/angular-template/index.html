@@ -7,6 +7,19 @@
 			form[name="login"] input[name="username"].ng-invalid.ng-touched{
 				background-color: red;
 			}
+			form[name="login"] input[name="username"].ng-pristine.ng-empty.ng-invalid-required{
+				background-color: yellow;
+			}
+			.is-red{
+				background-color: red;
+			}
+			.is-orange{
+				background-color: orange;
+			}
+			
+			.is-black{
+				background-color: black;
+			}
 		</style>
 	</head>
 	<body ng-controller="MainController as ctrl">
@@ -16,5 +29,6 @@
 		<script src="bower_components/angular/angular.js"></script>
 		<script src="src/app.module.js"></script>
 		<script src="src/controllers/main.controller.js"></script>
+		<script src="src/filters/zigzag.filter.js"></script>
 	</body>
 </html>

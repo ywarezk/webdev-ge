@@ -21,10 +21,10 @@
  Two way binding
  </h2>
  
- <form ng-submit="ctrl.alertUsername()" >
+ <form ng-submit="ctrl.alertUsername()" novalidate >
  	<label>Username</label>
  	<input name="username" type="text" ng-model="ctrl.username" />
- 	<button type="button" ng-click="ctrl.clearUsername()">Clear</button>
+ 	<button type="button" ng-click="ctrl.username = ''">Clear</button>
  	<button type="submit">Submit</button>
  </form>
  
@@ -45,12 +45,135 @@
  	<label>password</label>
  	<input type="password" name="password" ng-model="ctrl.loginPassword" />
  	<br/>
- 	<button type="submit">Submit</button>
+ 	<button type="submit" ng-disabled="login.$invalid">Submit</button>
  	<p><strong>is form valid:</strong> {{login.$valid}}</p>
  </form>
  
+ <h2>
+ 	Events
+ </h2>
+ 
+ <h4 ng-click="ctrl.ngClickExample($event);">
+ 	ng-click
+ </h4>
+ 
+ <h3>
+ 	Mouse events
+ </h3>
+ 
+ <h4 ng-mouseover="ctrl.mouseover = 'mouse over'">
+ 	ng-mouseover
+ </h4>
+ <p>
+ 	{{ctrl.mouseover}}
+ 
+ </p>
+ 
+ <h3>
+ ng-change
+ </h3>
+ <input type="text" ng-change="ctrl.ngChangeExample();" ng-model="ctrl.ngChangeExamleVar" />
+ 
+ <h2>
+ DOM manipulation
+ </h2>
+ 
+ <h3 class="{{ctrl.ngChangeExamleVar}}">
+ ng-if
+ </h3>
+ <p ng-if="ctrl.ngIfExample">
+ This will show when ng if is true
+ </p>
+ <p ng-if="!ctrl.ngIfExample" class="">
+ This will show when ng if is true
+ </p>
+ <button ng-click="ctrl.ngIfExample = !ctrl.ngIfExample;">Toggle paragraph</button>
+ 
+ <h3>
+ ng-repeat
+ </h3>
+ 
+ <ul>
+ 	<li ng-repeat="item in ctrl.groceryList">
+ 		{{$index}} {{item}}
+ 	</li>
+ </ul>
+ <form ng-submit="ctrl.groceryList.push(ctrl.newGrocery);">
+ 	<label>
+ 		new item
+ 	</label>
+ 	<input type="text" ng-model="ctrl.newGrocery" />
+ </form>
+ 
+ <h4>
+ 	new task list
+ </h4>
+ <div ng-repeat="task in ctrl.taskList" >
+ 	{{task.title}}
+ </div>
+ 
+ 
+ <h2>Changing appearance</h2>
+
+<h3 ng-class="ctrl.ngClassAsString">
+ng-class
+</h3> 
+<input type="text" ng-model="ctrl.ngClassAsString" />
+
+<h3 ng-class="ctrl.ngClassObject">
+ng-class as object
+</h3> 
+<label>
+is red
+</label>
+<input type="checkbox" ng-model="ctrl.ngClassObject['is-red']" ng-true-value="true" ng-false-value="false" />
+
+<h3 ng-style="{'background-color': 'purple'}">
+ng-style
+</h3>
+
+<h3 ng-style="ctrl.ngStyleExample">
+ng-style
+</h3>
+
+<h2>
+Filters
+</h2>
  
  
  
+ <!-- {{expression | filter:arg1}} -->
+ 
+ <h3>
+ Date filter
+ </h3>
+ 
+ {{ctrl.myDate | date:'dd/MM/yyyy'}}
+ 
+ {{ctrl.dateFilterInTheControllerWrongPractice()}}
+
+ 
+ <h3>
+ Filter filter
+ </h3>
  
  
+ <label>search grocery</label>
+ <input type="text" ng-model="ctrl.searchString" />
+ 
+ <ul>
+ 	<li ng-repeat="item in ctrl.groceryList | filter:ctrl.searchString" >
+ 		{{item}}
+ 	</li>
+ </ul>
+ 
+ <h3>
+ JSON filter
+ </h3>
+ {{ctrl.taskList | json}}
+ 
+ <h3>
+ Custom filter
+ </h3>
+ 
+ {{'hello world' | zigzag:2}}
