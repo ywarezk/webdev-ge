@@ -1,0 +1,17 @@
+<html ng-app="AppModule">
+	<head>
+		<title>
+			Angular hello world
+		</title>
+	</head>
+	<body ng-controller="MainController as ctrl">
+		<div ng-include="'src/templates/main.template.html'">
+		</div>
+		
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="src/app.module.js"></script>
+		<script src="src/controllers/main.controller.js"></script>
+		<script src="src/services/constants.js"></script>
+		<script src="src/services/pokemon.factory.js"></script>
+	</body>
+</html>
