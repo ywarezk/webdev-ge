@@ -1,0 +1,21 @@
+<html ng-app="AppModule">
+	<head>
+		<title>
+			Angular hello world
+		</title>
+	</head>
+	<body ng-controller="MainController as ctrl">
+		<div ng-include="'src/templates/main.template.html'">
+		</div>
+		
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		
+		<script src="src/app.module.js"></script>
+		<script src="src/controllers/main.controller.js"></script>
+		<script src="src/services/task/task.factory.js"></script>
+		<script src="src/services/task/task-service.factory.js"></script>
+		<script src="src/services/task/task-service2.factory.js"></script>
+		
+	</body>
+</html>
