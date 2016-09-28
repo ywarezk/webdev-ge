@@ -63,6 +63,7 @@ angular.module('AppModule')
 			 * @return {Promise<Task>}
 			 */
 			self.createTask = function createTask(task){
+				debugger;
 				var res = _createResource();
 				var resInst = new res();
 				var dictTask = task.toDict();
@@ -70,8 +71,7 @@ angular.module('AppModule')
 				for(var i=0; i<keys.length; i++){
 					resInst[keys[i]] = dictTask[keys[i]];
 				}
-				debugger;
-				resInst.$save();
+				return resInst.$save();
 			}
 			
 			
