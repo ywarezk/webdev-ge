@@ -1,0 +1,37 @@
+<html ng-app="AppModule">
+	<head>
+		<title>
+			Angular hello world
+		</title>
+		<base href="/" />
+	</head>
+	<body>
+		
+		<nav>
+			<ul>
+				<li>
+					<a ui-sref="home" >Home</a>
+				</li>
+				<li>
+					<a ui-sref="about" target="_blank">about</a>
+				</li>
+				<li>
+					<a ui-sref="parentTasks.tasksList">tasks</a>
+				</li>
+				<li>
+					<a ui-sref="parentTasks.singleTask({id: 3, slug: 'katz'})">single task 3</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<div ui-view></div>
+		
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="src/app.module.js"></script>
+		<script src="src/controllers/home.controller.js"></script>
+		<script src="src/controllers/about.controller.js"></script>
+		<script src="src/controllers/task-list.controller.js"></script>
+		<script src="src/controllers/single-task.controller.js"></script>
+	</body>
+</html>

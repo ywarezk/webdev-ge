@@ -1,0 +1,18 @@
+<!-- 
+	Template for the main controller
+ -->
+ 
+ <h1>
+ 	hello task list4
+ </h1>
+ 
+ 
+ <ul>
+ 	<li ng-repeat="task in ctrl.tasks">
+ 		<a ui-sref="parentTasks.singleTask({id: task.id, slug: task.title})">
+ 		{{task.title}}
+ 		</a>	
+ 	</li>
+ </ul>
+ 
+ 

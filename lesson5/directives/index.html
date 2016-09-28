@@ -1,0 +1,22 @@
+<html ng-app="AppModule">
+	<head>
+		<title>
+			Angular hello world
+		</title>
+	</head>
+	<body ng-controller="MainController as ctrl">
+		
+		<div >
+			<ge-hello-world greeting-attr="ctrl.greeting" say-hello="ctrl.sayHelloFromController(message)" say-hello2="ctrl.sayHelloFromController">
+				<div>
+					{{ctrl.messageFromParent}}
+				</div>
+			</ge-hello-world>
+		</div>
+		
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="src/app.module.js"></script>
+		<script src="src/controllers/main.controller.js"></script>
+		<script src="src/directives/hello-world/hello-world.directive.js"></script>
+	</body>
+</html>
