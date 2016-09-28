@@ -3,6 +3,7 @@
 angular.module('AppModule')
 	.directive('geHelloWorld', ['$timeout', function($timeout) {
 		return {
+			require: '^parentDirective',
 			templateUrl: 'src/directives/hello-world/hello-world.template.html',
 			scope: {
 				greetingDirective: '=greetingAttr',
@@ -17,6 +18,9 @@ angular.module('AppModule')
 				element.on('$destroy', function(){
 					console.log('no!!!! ');
 				});
+			},
+			controller: function($scope, $timeout){
+				
 			},
 			transclude: true
 		}
